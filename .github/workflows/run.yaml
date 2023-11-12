@@ -11,5 +11,5 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Which ubuntu?
-      run: uname -a
+    - name: install R
+      run: apt-get update && apt-get install r-base
