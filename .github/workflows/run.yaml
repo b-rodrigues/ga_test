@@ -10,9 +10,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    steps:
-    - name: install R
-      run: sudo apt-get update && sudo apt-get install r-base
-      
-    - name: install R
-      run: R -e 'install.packages("dplyr")'
+steps:
+  - uses: actions/checkout@v3
+  - uses: r-lib/actions/setup-r@v2
+    with:
+      r-version: '3.5.3' # The R version to download (if necessary) and use. 
+    # Use "renv" to retrieve R version recorded in renv.lock file.
+  - run: Rscript -e 'print("hello")'
