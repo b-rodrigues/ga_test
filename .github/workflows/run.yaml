@@ -12,4 +12,4 @@ jobs:
 
     steps:
     - name: install R
-      run: apt-get update && apt-get install r-base
+      run: sudo apt-get update && sudo apt-get install r-base
