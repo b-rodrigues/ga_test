@@ -13,7 +13,6 @@ jobs:
     steps:
     - name: install R
       run: sudo apt-get update && sudo apt-get install r-base
-    
-    steps:
+      
     - name: install R
       run: R -e 'install.packages("dplyr")'
